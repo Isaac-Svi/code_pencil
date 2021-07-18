@@ -9,7 +9,7 @@ export default class Project {
         this.css = css
         this.js = js
         console.log(id)
-        this.id = id !== null ? id : this.generateID(10)
+        this.id = id ? id : this.generateID(10)
         this.dateLastSaved = new Date()
     }
 

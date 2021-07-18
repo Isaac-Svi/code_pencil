@@ -3,12 +3,12 @@ import Random from '../utils/Random.mjs'
 export default class Project {
     static idChars = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`
 
-    constructor({ title = 'Undefined', html, css, js }) {
+    constructor({ title = 'Undefined', html, css, js, id }) {
         this.title = title
         this.html = html
         this.css = css
         this.js = js
-        this.id = this.generateID(10)
+        this.id = id ? id : this.generateID(10)
         this.dateLastSaved = new Date()
     }
 

@@ -102,21 +102,14 @@ class NavBar extends Element {
         let id = location.pathname.split('/')
         id = id[id.length - 1]
 
-        console.log(projects[id])
+        let project = new Project({
+            id,
+            html: html.value,
+            css: css.value,
+            js: js.value,
+        })
 
-        let project = projects[id]
-
-        if (id) {
-            projects[id].html = html.value
-            projects[id].css = css.value
-            projects[id].js = js.value
-        } else {
-            project = new Project({
-                html: html.value,
-                css: css.value,
-                js: js.value,
-            })
-        }
+        projects[project.id] = project
 
         projects[id] = project
 

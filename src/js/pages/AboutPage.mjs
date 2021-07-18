@@ -4,7 +4,8 @@ class AboutPage extends View {
     constructor(args) {
         super(args)
 
-        this.importStyle('http://127.0.0.1:5500/src/css/about.css')
+        const base = window.location.origin
+        this.importStyle(`${base}/src/css/about.css`)
     }
 
     async view(app) {

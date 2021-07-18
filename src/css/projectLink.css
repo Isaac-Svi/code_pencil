@@ -1,0 +1,29 @@
+.project-link {
+    display: block !important;
+    background-color: var(--color4);
+    border-radius: 6px;
+    transition: 0.5s;
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.project-link * {
+    pointer-events: none;
+    background: transparent !important;
+}
+.project-link h2 {
+    font-weight: 400;
+    font-size: 1.75em;
+}
+.project-link small {
+    color: white;
+    font-family: monospace;
+    font-size: 0.75em;
+}
+
+.project-link:hover {
+    box-shadow: 10px 10px 10px var(--color3);
+    transition: 0.6s;
+    transform: translate(0, -15px);
+}

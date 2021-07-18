@@ -1,0 +1,28 @@
+.container, .sign-up, .sign-in{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.container{
+    height: 80vh;
+
+}
+
+.sign-up, .sign-in{
+    justify-content: center; 
+    text-align: center;
+    background-color: var(--color3);
+    height: 45vh;
+    width: 25vw;
+    margin-top: 20px;
+    border-radius: 5px;
+    line-height: 4;
+}
+
+#signUp-em, #signUp-pw, #signIn-em, #signIn-pw{
+    width: 20vw;
+    padding: 10px;
+}

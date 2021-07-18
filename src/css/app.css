@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color4);
+}
+
+.output {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay.behind {
+    z-index: -1;
+}
+
+.container,
+.nav {
+    display: flex;
+}
+
+.container {
+    height: calc(100vh - 50px);
+}
+
+.left,
+.html,
+.css,
+.js,
+.h-top,
+.c-top,
+.j-top,
+.nav {
+    background-color: var(--color4);
+}
+
+.right {
+    --width: max(30vw, 300px);
+    position: relative;
+    width: var(--width);
+    min-width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right h4 {
+    position: relative;
+    width: 100%;
+}
+
+.right button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.html,
+.css,
+.js {
+    padding: 20px;
+    border: 4px solid var(--color3);
+    border-top: none;
+    color: var(--yellow);
+    overflow-y: scroll;
+    outline: none;
+    resize: none;
+    transition: 0.4s;
+    flex: 1;
+}
+
+.html::-webkit-scrollbar,
+.css::-webkit-scrollbar,
+.js::-webkit-scrollbar {
+    width: var(--scrollWidth);
+}
+
+.html::-webkit-scrollbar-track,
+.css::-webkit-scrollbar-track,
+.js::-webkit-scrollbar-track {
+    background-color: var(--scrollColor);
+}
+
+.html::-webkit-scrollbar-thumb,
+.css::-webkit-scrollbar-thumb,
+.js::-webkit-scrollbar-thumb {
+    box-shadow: var(--scroll-box-shadow);
+}
+
+.left {
+    flex: 1;
+    position: relative;
+}
+
+.h-top,
+.c-top,
+.j-top {
+    height: 5vh;
+    width: 100%;
+    color: var(--color2);
+    padding: 14px;
+    border: 2px solid var(--color3);
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.dragger {
+    background-color: var(--color3);
+    width: 5px;
+    cursor: col-resize;
+}
+
+#pop {
+    position: fixed;
+    font-family: monospace;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    width: 40vw;
+    height: 40vh;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 5px;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg, black, #444);
+    color: var(--pink);
+    z-index: 999;
+}
+#pop > * {
+    flex: 1;
+}
+#pop h3 {
+    flex: 0;
+    padding: 20px 0 10px 0;
+    margin-top: 5px;
+}
+button,
+.save {
+    position: absolute;
+    font-family: monospace;
+    top: 12px;
+    right: 220px;
+    background-color: var(--color3);
+    color: var(--yellow);
+    padding: 5px;
+    border-radius: 5px;
+}
+.save {
+    right: 170px;
+}
+#pop span {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+#pop textarea {
+    height: 50px;
+    padding: 5px;
+    background-color: var(--color3);
+    color: var(--yellow);
+    outline: none;
+    resize: none;
+}
+.go-down {
+    animation: go-down 0.6s ease-out forwards;
+}
+@keyframes go-down {
+    to {
+        transform: translate(-50%, 25%);
+    }
+}
+@media all and (max-width: 480px) {
+    button {
+        right: 210px;
+    }
+    .save {
+        position: absolute;
+        right: 160px;
+    }
+}

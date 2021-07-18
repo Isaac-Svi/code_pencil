@@ -107,6 +107,7 @@ class NavBar extends Element {
 
         let id = location.pathname.split('/')
         id = id[id.length - 1].includes('app') ? null : id[id.length - 1]
+        console.log(id)
         if (id) project.id = id
 
         projects[project.id] = project

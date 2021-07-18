@@ -57,8 +57,8 @@ document.addEventListener('click', (e) => {
 
                 const projects = JSON.parse(localStorage.getItem('projects'))
 
-                CSS.$el.innerText = projects[id].css
-            }, 200)
+                CSS.$el.innerText = projects[id] ? projects[id].css : ''
+            }, 0)
         }
     }
 })

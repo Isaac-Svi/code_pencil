@@ -8,7 +8,8 @@ export default class Project {
         this.html = html
         this.css = css
         this.js = js
-        this.id = id ? id : this.generateID(10)
+        console.log(id)
+        this.id = id !== null ? id : this.generateID(10)
         this.dateLastSaved = new Date()
     }
 

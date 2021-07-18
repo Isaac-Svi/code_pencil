@@ -6,6 +6,10 @@ self.addEventListener('install', (e) => {
                 './manifest.json',
                 './images/test.webp',
                 './src/css/style.css',
+                './src/css/about.css',
+                './src/css/app.css',
+                './src/css/global.css',
+                './src/css/projectLink.css',
                 './src/js/index.mjs',
             ])
         })

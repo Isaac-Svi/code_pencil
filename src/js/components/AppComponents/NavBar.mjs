@@ -111,8 +111,6 @@ class NavBar extends Element {
 
         projects[project.id] = project
 
-        projects[id] = project
-
         localStorage.setItem('projects', JSON.stringify(projects))
 
         history.pushState(null, null, `/app/${project.id}`)

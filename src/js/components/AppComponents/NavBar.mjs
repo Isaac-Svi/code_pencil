@@ -99,15 +99,15 @@ class NavBar extends Element {
         const js = document.querySelector('.js')
         const projects = JSON.parse(localStorage.getItem('projects'))
 
-        let id = location.pathname.split('/')
-        id = id[id.length - 1].includes('app') ? null : id[id.length - 1]
-
         let project = new Project({
-            id,
             html: html.value,
             css: css.value,
             js: js.value,
         })
+
+        let id = location.pathname.split('/')
+        id = id[id.length - 1].includes('app') ? null : id[id.length - 1]
+        if (id) project.id = id
 
         projects[project.id] = project
 

@@ -7,7 +7,8 @@ export default class AppPage extends View {
     constructor({ params, ...args }) {
         super(args)
         this.params = params
-        this.importStyle('https://code-pencil.vercel.app/src/css/app.css')
+        const base = window.location.origin
+        this.importStyle(`${base}/src/css/app.css`)
     }
 
     getContent() {

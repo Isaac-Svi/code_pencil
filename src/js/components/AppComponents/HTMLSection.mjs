@@ -38,7 +38,7 @@ const HTML = new Element({
 })
 
 // add html to textarea if it exists
-if (e.target.href.includes('/app')) {
+if (location.pathname.includes('/app')) {
     setTimeout(() => {
         let id = location.pathname.split('/')
         id = id[id.length - 1]

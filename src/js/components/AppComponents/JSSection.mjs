@@ -37,7 +37,7 @@ const JS = new Element({
     },
 })
 
-if (e.target.href.includes('/app')) {
+if (location.pathname.includes('/app')) {
     setTimeout(() => {
         let id = location.pathname.split('/')
         id = id[id.length - 1]

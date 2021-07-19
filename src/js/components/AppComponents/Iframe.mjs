@@ -11,11 +11,13 @@ const Iframe = new Element({
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>CodePad</title>
-            <style></style>
+            <style>
+            ${document.querySelector('.css').value}
+            </style>
         </head>
         <body>
-            <output></output>
-            <script></script>
+            <output>${document.querySelector('.html').value}</output>
+            <script>${document.querySelector('.js').value}</script>
         </body>
         </html>
         `,

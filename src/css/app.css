@@ -12,6 +12,10 @@ body {
     background-color: white;
 }
 
+button i.fa-chevron-down {
+    pointer-events: none;
+}
+
 .overlay {
     position: absolute;
     top: 0;

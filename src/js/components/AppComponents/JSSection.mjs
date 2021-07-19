@@ -37,13 +37,15 @@ const JS = new Element({
     },
 })
 
-if (location.pathname.includes('/app')) {
-    let id = location.pathname.split('/')
-    id = id[id.length - 1]
+if (e.target.href.includes('/app')) {
+    setTimeout(() => {
+        let id = location.pathname.split('/')
+        id = id[id.length - 1]
 
-    const projects = JSON.parse(localStorage.getItem('projects'))
+        const projects = JSON.parse(localStorage.getItem('projects'))
 
-    JS.$el.innerText = projects[id].js
+        JS.$el.innerText = projects[id] ? projects[id].js : ''
+    }, 300)
 }
 
 window.addEventListener('popstate', () => {

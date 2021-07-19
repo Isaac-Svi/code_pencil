@@ -38,13 +38,15 @@ const HTML = new Element({
 })
 
 // add html to textarea if it exists
-if (location.pathname.includes('/app')) {
-    let id = location.pathname.split('/')
-    id = id[id.length - 1]
+if (e.target.href.includes('/app')) {
+    setTimeout(() => {
+        let id = location.pathname.split('/')
+        id = id[id.length - 1]
 
-    const projects = JSON.parse(localStorage.getItem('projects'))
+        const projects = JSON.parse(localStorage.getItem('projects'))
 
-    HTML.$el.innerText = projects[id].html
+        HTML.$el.innerText = projects[id] ? projects[id].html : ''
+    }, 300)
 }
 
 window.addEventListener('popstate', () => {

@@ -65,9 +65,8 @@ button i.fa-chevron-down {
 
 .right button {
     position: absolute;
-    top: 50%;
+    top: 20%;
     right: 10px;
-    transform: translateY(-50%);
     border: none;
     outline: none;
     background: transparent;

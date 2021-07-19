@@ -37,6 +37,15 @@ const CSS = new Element({
     },
 })
 
+if (location.pathname.includes('/app')) {
+    let id = location.pathname.split('/')
+    id = id[id.length - 1]
+
+    const projects = JSON.parse(localStorage.getItem('projects'))
+
+    CSS.$el.innerText = projects[id].css
+}
+
 window.addEventListener('popstate', () => {
     if (location.pathname.includes('/app')) {
         let id = location.pathname.split('/')

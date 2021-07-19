@@ -37,6 +37,16 @@ const HTML = new Element({
     },
 })
 
+// add html to textarea if it exists
+if (location.pathname.includes('/app')) {
+    let id = location.pathname.split('/')
+    id = id[id.length - 1]
+
+    const projects = JSON.parse(localStorage.getItem('projects'))
+
+    HTML.$el.innerText = projects[id].html
+}
+
 window.addEventListener('popstate', () => {
     if (location.pathname.includes('/app')) {
         let id = location.pathname.split('/')

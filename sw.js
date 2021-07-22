@@ -15,6 +15,10 @@ self.addEventListener('install', (e) => {
                 './src/css/global.css',
                 './src/css/projectLink.css',
                 './src/js/index.mjs',
+                './src/js/App.mjs',
+                './src/js/Router.mjs',
+                './src/js/Element.mjs',
+                './src/js/View.mjs',
             ])
         })
     )

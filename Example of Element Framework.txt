@@ -1,0 +1,64 @@
+
+myFunction({
+ children: some_array_of_children,
+ 
+})
+
+const attributes = {
+  class: "one two three four",
+  
+}
+
+// child1 -> class of child1 etc.
+const children = [child1, child2]
+
+const Div = new Element({
+  children: children,
+})
+
+Div.addInnerHTML('beforebegin', "Hi, this is a div")
+
+Hi, this is a div
+<div>
+  <div class="child1"></div>
+  <div class="child2"></div>
+  <span>hi i am a span</span>
+</div>
+
+const Span = new Element({
+  tag: 'span',
+  innerHTML: 'hi i am a span'
+})
+const Span2 = new Element({
+  tag: 'span',
+  innerHTML: 'hi i am a span'
+})
+
+Div.append(Span)
+
+Div.appendMany([Span, Span2])
+
+Div.remove()
+
+// remove child must take in an Element
+Div.removeChild(Span)
+
+Div.addEventListener(event, cb)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

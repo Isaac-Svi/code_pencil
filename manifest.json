@@ -1,6 +1,6 @@
 {
-    "name": "PWA example",
-    "short_name": "PWA example",
+    "name": "Code Pencil",
+    "short_name": "Code ✏️",
     "start_url": ".",
     "background_color": "#2c2e43",
     "theme_color": "#171717",

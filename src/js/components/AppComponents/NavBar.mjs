@@ -100,9 +100,9 @@ class NavBar extends Element {
         const projects = JSON.parse(localStorage.getItem('projects'))
 
         let project = new Project({
-            html: html.value,
-            css: css.value,
-            js: js.value,
+            html: JSON.stringify(html.value, null, 4),
+            css: JSON.stringify(css.value, null, 4),
+            js: JSON.stringify(js.value, null, 4),
         })
 
         let id = location.pathname.split('/')
@@ -111,8 +111,7 @@ class NavBar extends Element {
 
         projects[project.id] = project
 
-        localStorage.setItem('projects', JSON.stringify(projects, null, 4))
-        // localStorage.setItem('projects', JSON.stringify(projects))
+        localStorage.setItem('projects', JSON.stringify(projects))
 
         history.pushState(null, null, `/app/${project.id}`)
     }

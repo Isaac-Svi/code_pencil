@@ -56,7 +56,7 @@ window.addEventListener('popstate', () => {
 
         const projects = JSON.parse(localStorage.getItem('projects'))
 
-        HTML.$el.innerText = projects[id].html
+        HTML.$el.value = projects[id].html
     }
 })
 
@@ -69,7 +69,7 @@ document.addEventListener('click', (e) => {
 
                 const projects = JSON.parse(localStorage.getItem('projects'))
 
-                HTML.$el.innerText = projects[id] ? projects[id].html : ''
+                HTML.$el.value = projects[id] ? projects[id].html : ''
             }, 100)
         }
     }

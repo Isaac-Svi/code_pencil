@@ -44,7 +44,7 @@ if (location.pathname.includes('/app')) {
 
         const projects = JSON.parse(localStorage.getItem('projects'))
 
-        CSS.$el.innerText = projects[id] ? projects[id].css : ''
+        CSS.$el.value = projects[id] ? projects[id].css : ''
     }, 300)
 }
 
